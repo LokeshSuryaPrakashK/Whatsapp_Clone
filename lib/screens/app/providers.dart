@@ -1,10 +1,8 @@
-import 'package:flutter/material.dart';
-
-class Providers extends StatelessWidget {
-  const Providers({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
+class AppProviders {
+  static List<SingleChildWidget> providers = [
+    ChangeNotifierProvider(create: (_) => AppProvider()),
+    ChangeNotifierProvider(create: (_) => AuthProvider()),
+    ChangeNotifierProvider(create: (_) => HomeProvider()),
+    ChangeNotifierProvider(create: (_) => ProfileProvider()),
+  ];
 }
